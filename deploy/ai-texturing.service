@@ -1,0 +1,17 @@
+[Unit]
+Description=UE AI Texturing FastAPI Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ai-texturing
+Group=ai-texturing
+WorkingDirectory=/opt/ue-ai-texturing
+EnvironmentFile=/opt/ue-ai-texturing/.env
+ExecStart=/opt/ue-ai-texturing/.venv/bin/uvicorn server.app.main:app --host $SERVER_HOST --port $SERVER_PORT
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

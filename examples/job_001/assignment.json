@@ -1,0 +1,27 @@
+{
+  "unreal": {
+    "master_material": "/Game/AI_Texturing/Materials/M_AI_PBR_Master.M_AI_PBR_Master",
+    "texture_root": "/Game/AI_Texturing/Generated/Textures",
+    "instance_root": "/Game/AI_Texturing/Generated/Instances"
+  },
+  "materials": [
+    {
+      "name": "wall_concrete",
+      "display_name": "Wall Concrete",
+      "assign_patterns": ["SM_Wall_*", "Wall_*", "*wall*"],
+      "tiling": 3.0,
+      "normal_strength": 1.0,
+      "roughness_mult": 1.0,
+      "metallic": 0.0
+    },
+    {
+      "name": "floor_tiles",
+      "display_name": "Floor Tiles",
+      "assign_patterns": ["SM_Floor_*", "Floor_*", "*floor*"],
+      "tiling": 4.0,
+      "normal_strength": 1.2,
+      "roughness_mult": 1.0,
+      "metallic": 0.0
+    }
+  ]
+}

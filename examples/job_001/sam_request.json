@@ -1,0 +1,9 @@
+{
+  "provider": "mock",
+  "mode": "automatic",
+  "params": {
+    "width": 1024,
+    "height": 1024
+  },
+  "fallback_to_mock": true
+}

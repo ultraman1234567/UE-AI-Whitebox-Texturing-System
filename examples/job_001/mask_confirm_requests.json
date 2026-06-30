@@ -1,0 +1,14 @@
+{
+  "requests": [
+    {
+      "material_name": "wall_concrete",
+      "candidate_mask_ids": ["mask_001"],
+      "operation": "replace"
+    },
+    {
+      "material_name": "floor_tiles",
+      "candidate_mask_ids": ["mask_002"],
+      "operation": "replace"
+    }
+  ]
+}

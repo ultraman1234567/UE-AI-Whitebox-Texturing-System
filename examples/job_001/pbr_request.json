@@ -1,0 +1,5 @@
+{
+  "provider": "material_palette",
+  "texture_size": 1024,
+  "fallback_to_mock": true
+}

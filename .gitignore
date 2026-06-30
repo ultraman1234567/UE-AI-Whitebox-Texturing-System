@@ -1,0 +1,19 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local job outputs and generated assets
+data/
+server_data/
+outputs/
+*.zip
+
+# Unreal/generated local files
+Intermediate/
+Saved/
+DerivedDataCache/
+Binaries/

@@ -1,0 +1,16 @@
+services:
+  ai-texturing-server:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    env_file:
+      - ../.env
+    environment:
+      SERVER_HOST: 0.0.0.0
+      SERVER_PORT: 8000
+      SERVER_DATA_DIR: /app/server_data/jobs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../server_data:/app/server_data
+    restart: unless-stopped

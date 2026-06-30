@@ -1,0 +1,8 @@
+{
+  "provider": "mock",
+  "prompt": "industrial corridor with concrete walls and worn floor tiles",
+  "negative_prompt": "text, watermark, distorted geometry",
+  "width": 1024,
+  "height": 1024,
+  "fallback_to_mock": true
+}
