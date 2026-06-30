@@ -15,10 +15,10 @@
 #include "Widgets/Docking/SDockTab.h"
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Input/SEditableTextBox.h"
+#include "Widgets/Input/SMultiLineEditableTextBox.h"
 #include "Widgets/Layout/SBorder.h"
 #include "Widgets/Layout/SScrollBox.h"
 #include "Widgets/SBoxPanel.h"
-#include "Widgets/Text/SMultiLineEditableTextBox.h"
 #include "Widgets/Text/STextBlock.h"
 
 #include <initializer_list>
