@@ -16,12 +16,18 @@ cd MaterialPalette
 
 Create the Python or conda environment according to the upstream Material Palette documentation. Match CUDA, PyTorch, and model-weight versions to the target GPU server.
 
+For the tested server setup, including mamba, PyTorch/CUDA pinning, pip 24.0, `pydantic`/`lightning` compatibility fixes, and validation commands, use:
+
+```text
+deploy/material_palette_env_setup.md
+```
+
 Example shell:
 
 ```bash
-conda create -n material_palette python=3.10
-conda activate material_palette
-# Install Material Palette requirements following its upstream README.
+conda activate matpal
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+python -c "import lightning, diffusers, peft, cv2, jsonargparse, easydict; print('matpal deps ok')"
 ```
 
 Do not commit model weights, paid assets, license files, private URLs, or credentials to this repository.
@@ -31,11 +37,11 @@ Do not commit model weights, paid assets, license files, private URLs, or creden
 Configure the provider through `.env` or `server_config.yaml`:
 
 ```env
-MATERIAL_PALETTE_REPO_PATH=/opt/MaterialPalette
-MATERIAL_PALETTE_CONDA_ENV=material_palette
-MATERIAL_PALETTE_OUTPUT_DIR=material_palette_output
-MATERIAL_PALETTE_TIMEOUT=900
-MATERIAL_PALETTE_COMMAND_TEMPLATE=conda run -n {conda_env} python run.py --input "{input_dir}" --output "{output_dir}"
+MATERIAL_PALETTE_REPO_PATH=/opt/data/private/Tesla/XR/kosmos/MaterialPalette
+MATERIAL_PALETTE_CONDA_ENV=matpal
+MATERIAL_PALETTE_OUTPUT_DIR=material_palette_input
+MATERIAL_PALETTE_TIMEOUT=3600
+MATERIAL_PALETTE_COMMAND_TEMPLATE=conda run -n {conda_env} python pipeline.py "{input_dir}"
 ```
 
 Available command template variables:

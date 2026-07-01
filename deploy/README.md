@@ -4,6 +4,7 @@ Local development remains mock-first. Real GPU deployment notes live in focused 
 
 - `server_setup.md`
 - `material_palette_setup.md`
+- `material_palette_env_setup.md`
 - `sam_setup.md`
 
 Container examples:
