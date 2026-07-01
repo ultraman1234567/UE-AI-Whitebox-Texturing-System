@@ -70,5 +70,7 @@ def _load_dotenv_file(path: Path) -> None:
             continue
         key, value = stripped.split("=", 1)
         key = key.strip()
-        value = value.strip().strip('"').strip("'")
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1]
         os.environ.setdefault(key, value)
